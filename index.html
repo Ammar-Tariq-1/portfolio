@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <script>document.documentElement.classList.add('js');</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ammar Tariq — Full-Stack Web Developer | Portfolio</title>
@@ -30,20 +31,23 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#landing">Home</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li class="nav-contact-link">
+        <a href="mailto:ammartariq7@hotmail.com" aria-label="Email Ammar Tariq">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+        </a>
+      </li>
     </ul>
   </nav>
 
   <main id="main-content" tabindex="-1">
-    <!-- ═══════════════ SECTION 1: LANDING (LIGHT CREAM) ═══════════════ -->
-  <section id="landing" class="section landing-section">
+<section id="landing" class="section landing-section">
     <div class="hero-circle">
       <span class="hero-float-icon">💻</span>
       <span class="hero-float-icon">🎨</span>
@@ -60,7 +64,7 @@
         design, development, and deployment end to end. From hand-coded HTML, CSS, and JavaScript to WordPress and
         WooCommerce, I take projects from first wireframe to live URL.</p>
       <div class="landing-cta">
-        <a href="#projects" class="btn btn-primary-light">
+        <a href="#work" class="btn btn-primary-light">
           <span>View My Work</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M7 17l9.2-9.2M17 17V7.8H7.8" />
@@ -73,16 +77,19 @@
             <path d="M22 2l-7 20-4-9-9-4 20-7z" />
           </svg>
         </a>
+        <a href="{{RESUME_PDF_PATH}}" class="btn btn-outline-light" download hidden data-confirm="true">
+          <span>Download resume</span>
+        </a>
       </div>
       <div class="landing-socials">
-        <a href="https://github.com/ammar-tariq-1" target="_blank" rel="noopener" class="social-icon light-icon"
+        <a href="https://github.com/ammar-tariq-1" target="_blank" rel="noopener noreferrer" class="social-icon light-icon"
           aria-label="GitHub">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
           </svg>
         </a>
-        <a href="#" target="_blank" rel="noopener" class="social-icon light-icon" aria-label="LinkedIn">
+        <a href="{{LINKEDIN_URL}}" target="_blank" rel="noopener noreferrer" class="social-icon light-icon" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -101,499 +108,289 @@
     </div>
   </section>
 
-  <!-- ═══════════════ SECTION 2: ABOUT ME (DARK) ═══════════════ -->
-  <section id="about" class="section about-section dark-section">
+  <section id="work" class="section work-section">
     <div class="container">
-      <h2 class="section-title light"><span>About Me</span></h2>
-      <div class="about-grid">
-        <div class="about-photo-wrapper anim-observe">
-          <div class="about-photo">
-            <img src="profile-pic.png" alt="Ammar Tariq wearing a dark blazer over a teal shirt; his portrait identifies the portfolio owner." />
-            <div class="photo-border-glow"></div>
-          </div>
-          <!-- <div class="about-quick-links">
-            <a href="#experience" class="quick-link"><span class="ql-icon">💼</span> Experience</a>
-            <a href="#education" class="quick-link"><span class="ql-icon">🎓</span> Education</a>
-            <a href="#projects" class="quick-link"><span class="ql-icon">🚀</span> Projects</a>
-            <a href="#skills" class="quick-link"><span class="ql-icon">⚡</span> Skills</a>
-            <a href="#certifications" class="quick-link"><span class="ql-icon">📜</span> Certs</a>
-          </div> -->
-        </div>
-        <div class="about-text anim-observe">
-          <p class="about-summary">I started writing code as a teenager and turned it into a freelance practice not long
-            after — today I work as a self-employed full-stack web developer out of Karachi, Pakistan. My day-to-day
-            spans the WordPress and WooCommerce ecosystem — Elementor, ShopEngine — for fast client launches, alongside
-            hand-built front ends in HTML, CSS, JavaScript, and jQuery for projects that need more control. On the back
-            end I work with PHP, MySQL, and Python, and I manage the full deployment pipeline myself: Git, Netlify,
-            Hostinger, InfinityFree — so a project goes from local build to live URL without a handoff. I also design
-            before I build, with Figma, Adobe XD, and Photoshop sitting right next to my code editor in my workflow.
-            What sets me apart at this stage is speed and ownership — clients get one person handling design, build, and
-            deployment, not a hand-off between three.</p>
-          <div class="mission-vision-grid">
-            <div class="mv-card anim-observe" data-anim="flip">
-              <div class="mv-icon">🎯</div>
-              <h3>Mission</h3>
-              <p>To build fast, honest websites that help small businesses look and perform like much bigger ones —
-                without the bloat or six-week timelines.</p>
+      <h2 class="section-title light">Selected work</h2>
+      <p class="section-subtitle light">Three real builds, from a company website to a custom-coded business site and an online store.</p>
+    <div class="case-study-list">
+  <article class="case-study-row">
+    <div class="case-study-media case-study-media-placeholder" role="img" aria-label="Energy For You project screenshot placeholder"><img src="Projects/Energyforyou/hero.jpg" alt=""></div>
+    <div class="case-study-content">
+      <div class="case-study-categories"><span>Company website</span><span>Internship</span></div>
+      <h3 class="case-study-name">Energy For You</h3>
+      <p class="case-study-summary">A product website for Energy For You, an authorized Sungrow distributor in Pakistan, built from scratch during my internship at Voltaic Power.</p>
+      <p class="case-study-meta"><span>Role:</span> Sole developer on the build, working with my mentors at Voltaic Power.</p>
+      <p class="case-study-meta"><span>Duration:</span> 2 to 22 July 2026</p>
+      <dl class="case-study-details">
+        <div><dt>Problem</dt><dd class="placeholder-flag-target" data-placeholder="false">The distributor needed a clear online home for its inverters and batteries, so customers could know what energy solutions were available.</dd></div>
+        <div><dt>What I built</dt><dd>A responsive WordPress site with an Elementor design, a product mega menu, product pages for hybrid inverters and batteries, a news section, an FAQ, and a contact form with authenticated email delivery.</dd></div>
+        <div><dt>Result</dt><dd class="placeholder-flag-target" data-placeholder="false">Delivered to the team within the internship and now live at energyforyou.net.</dd></div>
+      </dl>
+      <div class="case-study-stack"><span class="case-study-stack-label">Stack</span><span>WordPress</span><span>Elementor</span><span>Contact Form 7</span><span>WP Mail SMTP</span><span>cPanel</span></div>
+      <a class="btn btn-primary-light case-study-button" href="https://energyforyou.net/" target="_blank" rel="noopener noreferrer">View live site</a>
+    </div>
+  </article>
+  <article class="case-study-row">
+    <figure class="case-study-media"><img src="Projects/ta-labels/front-end-mockup.png" alt="TA Labels website screenshot showing the company profile and apparel catalog; included to present the client's custom textile business site." /></figure>
+    <div class="case-study-content">
+      <div class="case-study-categories"><span>Custom build</span><span>Client</span></div>
+      <h3 class="case-study-name">TA Labels</h3>
+      <p class="case-study-summary">A fully custom, dynamic website for TA Labels, a label manufacturer and wholesaler, with its own admin dashboard.</p>
+      <p class="case-study-meta"><span>Role:</span> Sole developer, from design to deployment.</p>
+      <dl class="case-study-details">
+        <div><dt>Problem</dt><dd class="placeholder-flag-target" data-placeholder="false">The business needed to show its labels and catalog online and manage that content without calling a developer.</dd></div>
+        <div><dt>What I built</dt><dd>The front end, back end, and database, written from scratch, plus an admin dashboard so the owner can update the site content.</dd></div>
+        <div><dt>Result</dt><dd class="placeholder-flag-target" data-placeholder="false">The owner now updates products and content from the dashboard without touching code.</dd></div>
+      </dl>
+      <div class="case-study-stack"><span class="case-study-stack-label">Stack</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
+      <a class="btn btn-primary-light case-study-button" href="https://talabels.site.je/" target="_blank" rel="noopener noreferrer">View live site</a>
+    </div>
+  </article>
+  <article class="case-study-row">
+    <figure class="case-study-media"><img src="Projects/Navni/laptop-mockup.png" alt="Navni Organic storefront screenshot showing its natural skincare products; included to present the client's online store design." /></figure>
+    <div class="case-study-content">
+      <div class="case-study-categories"><span>E-commerce</span><span>Client</span></div>
+      <h3 class="case-study-name">Navni Organic</h3>
+      <p class="case-study-summary">An online store for Navni Organic, an organic skincare brand.</p>
+      <p class="case-study-meta"><span>Role:</span> Sole developer, from design to deployment.</p>
+      <dl class="case-study-details">
+        <div><dt>Problem</dt><dd class="placeholder-flag-target" data-placeholder="false">The brand needed to sell its products online with a clean, trustworthy shopping experience that works on phones.</dd></div>
+        <div><dt>What I built</dt><dd>A WooCommerce store with an Elementor and ShopEngine design: product pages, cart, and checkout, tested across devices.</dd></div>
+        <div><dt>Result</dt><dd class="placeholder-flag-target" data-placeholder="false">The store went live and the owner now manages products and orders herself.</dd></div>
+      </dl>
+      <div class="case-study-stack"><span class="case-study-stack-label">Stack</span><span>WordPress</span><span>WooCommerce</span><span>Elementor</span><span>ShopEngine</span></div>
+      <a class="btn btn-primary-light case-study-button" href="https://navniorganic.com/" target="_blank" rel="noopener noreferrer">View live site</a>
+    </div>
+  </article>
+</div>
+      <div class="other-builds">
+        <h3 class="other-builds-title">Other builds</h3>
+        <p class="other-builds-subtitle">Practice projects I built to sharpen specific skills.</p>
+        <div class="other-builds-grid">
+          <article class="other-build-card">
+            <img src="Projects/Baskeria/baskeria-mockup.png" alt="Baskeria restaurant website screenshot showing its menu, chefs, and about page; included to demonstrate this practice build." />
+            <div class="other-build-content">
+              <h4>Baskeria</h4>
+              <p>a restaurant site with a menu, chefs, and an about page.</p>
+              <div class="other-build-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Bootstrap</span></div>
+              <a class="other-build-link" href="https://baskeria.netlify.app/" target="_blank" rel="noopener noreferrer">View project</a>
             </div>
-            <div class="mv-card anim-observe" data-anim="flip" style="--flip-delay: 0.2s;">
-              <div class="mv-icon">🔭</div>
-              <h3>Vision</h3>
-              <p>To grow from a one-person freelance practice into a developer trusted with bigger, more technically
-                ambitious products.</p>
+          </article>
+          <article class="other-build-card">
+            <img src="Projects/Foodmart/Foodmart Mockup.png" alt="Foodmart grocery storefront screenshot showing category browsing, product grids, and a cart flow; included to demonstrate this practice build." />
+            <div class="other-build-content">
+              <h4>GlideCart</h4>
+              <p>a grocery storefront UI with category browsing, product grids, and a cart flow.</p>
+              <div class="other-build-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Bootstrap</span><span>AJAX</span></div>
+              <a class="other-build-link" href="https://glidedcart.netlify.app/" target="_blank" rel="noopener noreferrer">View project</a>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ SECTION 3: EXPERIENCE (DARK) ═══════════════ -->
-  <section id="experience" class="section experience-section dark-section">
+  <section id="testimonials" class="section testimonials-section">
     <div class="container">
-      <h2 class="section-title light"><span>Work Experience</span></h2>
+      <h2 class="section-title light">What clients say</h2>
+      <div class="testimonials-grid">
+        <article class="testimonial-card placeholder-flag-target" data-placeholder="false">
+          <span class="testimonial-quote-mark" aria-hidden="true">“</span>
+          <blockquote>Ammar built our online store from scratch and handled everything, from the design to getting it live. It looks professional and our customers find it easy to use.</blockquote>
+          <p class="testimonial-name"><strong>Naveed Ahmed</strong></p>
+          <p class="testimonial-role">Founder - Navni Organic</p>
+          <p class="testimonial-project">Project: Navni Organic</p>
+        </article>
+        <article class="testimonial-card placeholder-flag-target" data-placeholder="false">
+          <span class="testimonial-quote-mark" aria-hidden="true">“</span>
+          <blockquote>We needed a site we could manage ourselves, and Ammar delivered one with an admin dashboard. He explained what he was building and made the changes we asked for.</blockquote>
+          <p class="testimonial-name"><strong>Tariq Ansari</strong></p>
+          <p class="testimonial-role">Owner - TA Labels</p>
+          <p class="testimonial-project">Project: TA Labels</p>
+        </article>
+        <article class="testimonial-card placeholder-flag-target" data-placeholder="false">
+          <span class="testimonial-quote-mark" aria-hidden="true">“</span>
+          <blockquote>Ammar took ownership of the Energy For You website and kept improving it throughout his internship. He was reliable, and he fixed problems quickly.</blockquote>
+          <p class="testimonial-name"><strong>Ms Sobia & Sr. Farzan</strong></p>
+          <p class="testimonial-role">Brand Manager & Designer - Voltaic Power</p>
+          <p class="testimonial-project">Project: Energy For You</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services-section">
+    <div class="container">
+      <h2 class="section-title light">What I can build for you</h2>
+      <p class="section-subtitle light">Websites for small businesses, built and launched end to end.</p>
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9M9 21v-7h6v7"/></svg>
+          </span>
+          <h3>Business websites</h3>
+          <p>Fast, responsive company sites in WordPress and Elementor, with forms, blogs, and product pages you can edit yourself.</p>
+          <p class="service-good-for"><strong>Good for:</strong> companies, distributors, and service businesses.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6L22 8H6"/><circle cx="10" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
+          </span>
+          <h3>Online stores</h3>
+          <p>WooCommerce stores with product pages, cart, and checkout, designed to feel trustworthy on a phone.</p>
+          <p class="service-good-for"><strong>Good for:</strong> brands that want to sell online.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01M8 13l-2 2 2 2m8-4 2 2-2 2m-3-5-2 6"/></svg>
+          </span>
+          <h3>Custom web apps</h3>
+          <p>Hand-coded PHP and MySQL sites with an admin dashboard, so you can manage content without a developer.</p>
+          <p class="service-good-for"><strong>Good for:</strong> businesses with their own catalog or workflow.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<section id="about" class="section about-section dark-section">
+    <div class="container">
+      <h2 class="section-title light"><span>About me</span></h2>
+      <h3 class="about-display-title" aria-label="Design and code"><span aria-hidden="true">DESIGN <span class="about-display-cross">×</span> CODE</span></h3>
+      <div class="about-copy-grid">
+        <div class="about-copy-column">
+          <p>I'm Ammar Tariq, a web developer in Karachi. Since 2024 I've built business websites and online stores for clients, from the first layout to the hosting.</p>
+          <p>In July 2026 I built the Energy For You distributor website during an internship at Voltaic Power.</p>
+        </div>
+        <div class="about-copy-column">
+          <p data-confirm="true">I care about the practical side of the web: sites that load fast, read clearly on a phone, and that the owner can keep updating without calling me.</p>
+          <p>I'm looking for businesses and teams who want one developer to own the whole project. Right now I'm studying HSC Computer Science at Commecs College, Karachi (expected 2027).</p>
+        </div>
+      </div>
+      <ol class="about-journey" aria-label="Professional journey">
+        <li class="about-journey-year">2024</li>
+        <li class="about-journey-milestone">Aug 2024 · Started freelancing</li>
+        <li class="about-journey-milestone">2025 · Advanced Web Development certificate</li>
+        <li class="about-journey-milestone">Jul 2026 · Internship at Voltaic Power</li>
+        <li class="about-journey-year">NOW</li>
+      </ol>
+    </div>
+  </section>
+
+<section id="experience" class="section experience-section dark-section">
+    <div class="container">
+      <h2 class="section-title light"><span>Experience</span></h2>
       <div class="experience-timeline">
-        <div class="exp-card anim-observe" data-anim="slide-left">
+        <article class="exp-card experience-entry">
           <div class="exp-card-left">
-            <div class="exp-company-badge">💼</div>
-            <h3 class="exp-role">Freelance Full-Stack Web Developer</h3>
-            <p class="exp-company">Self-Employed</p>
-            <span class="exp-type-badge">Freelance / Self-Employed</span>
+            <p class="exp-duration">2 to 22 July 2026</p>
+            <p class="exp-location">Karachi, on site</p>
           </div>
           <div class="exp-card-right">
-            <div class="exp-meta">
-              <span class="exp-location"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" />
-                </svg> Remote · Karachi, Pakistan</span>
-              <span class="exp-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" />
-                </svg> August 2024 — Present</span>
-            </div>
-            <div class="exp-details">
-              <h4>Key Responsibilities</h4>
-              <ul class="exp-bullets">
-                <li>Manage complete project lifecycles — discovery, design, development, and deployment — for business
-                  and e-commerce clients</li>
-                <li>Design and build responsive, mobile-first websites and online stores using WordPress, WooCommerce,
-                  HTML, CSS, and JavaScript</li>
-                <li>Develop custom front-end and back-end functionality with PHP, MySQL, and jQuery where off-the-shelf
-                  plugins fall short</li>
-                <li>Handle hosting, domain setup, and deployment across Netlify, Hostinger, and InfinityFree for every
-                  client launch</li>
-              </ul>
-              <h4>Key Achievements</h4>
-              <ul class="exp-bullets achievements">
-                <li>Delivered a fully functional e-commerce storefront for Navni Organics with a catalogue and shopping
-                  experience that performs consistently across devices</li>
-                <li>Built and shipped a responsive marketing site for TA Labels, translating their brand identity into a
-                  professional web presence</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ SECTION 4: EDUCATION (DARK) ═══════════════ -->
-  <section id="education" class="section education-section dark-section">
-    <div class="container">
-      <h2 class="section-title light"><span>Education</span></h2>
-      <div class="education-grid">
-        <div class="edu-card anim-observe" data-anim="drop-in">
-          <div class="edu-icon-wrap"><span class="edu-icon">🎓</span></div>
-          <div class="edu-content">
-            <h3>Intermediate in Computer Science</h3>
-            <p class="edu-institution">Commecs College</p>
-            <div class="edu-meta">
-              <span>📅 2024 — Present</span>
-              <span>📋 Full-time</span>
-            </div>
-            <h4>Key Highlights</h4>
-            <ul class="edu-highlights">
-              <li>Continuing core computer science foundations beyond matriculation level</li>
-              <li>Balancing full-time study with active freelance client work</li>
-              <li>Building toward a stronger theoretical base behind day-to-day development work</li>
+            <h3 class="exp-role">Web Developer Intern</h3>
+            <p class="exp-company">Voltaic Power Pvt Ltd</p>
+            <p class="exp-summary">Built the Energy For You distributor website from scratch, working with my mentors at Voltaic Power.</p>
+            <ul class="exp-bullets">
+              <li>Built the Energy For You website from scratch in WordPress and Elementor, from layout to launch.</li>
+              <li>Created the product mega menu, product pages for inverters and batteries, an FAQ, and the blog section.</li>
+              <li>Set up authenticated SMTP email for the contact and file-upload forms, and fixed form validation and delivery problems.</li>
+              <li>Tested the site across browsers and devices after every change.</li>
+              <li>Also worked on Voltaic Power's own website, and turned mentor feedback into daily improvements.</li>
             </ul>
-          </div>
-        </div>
-        <div class="edu-card anim-observe" data-anim="rise-up">
-          <div class="edu-icon-wrap"><span class="edu-icon">🎓</span></div>
-          <div class="edu-content">
-            <h3>Matriculation in Computer Science</h3>
-            <p class="edu-institution">Karachi Cadet Secondary School</p>
-            <div class="edu-meta">
-              <span>📅 2022 — 2024</span>
-              <span>📋 Full-time</span>
+            <div class="tools-chips exp-tools" aria-label="Tools used">
+              <span>WordPress</span><span>Elementor</span><span>Contact Form 7</span><span>WP Mail SMTP</span><span>cPanel</span>
             </div>
-            <h4>Key Highlights</h4>
-            <ul class="edu-highlights">
-              <li>First formal introduction to computer science and programming fundamentals</li>
-              <li>Built the foundation that led directly into self-taught web development</li>
-              <li>Completed alongside early experimentation with HTML, CSS, and JavaScript</li>
+            <a class="exp-work-link" href="https://energyforyou.net/">energyforyou.net</a>
+          </div>
+        </article>
+        <article class="exp-card experience-entry">
+          <div class="exp-card-left">
+            <p class="exp-duration">August 2024 to present</p>
+            <p class="exp-location">Remote, Karachi</p>
+          </div>
+          <div class="exp-card-right">
+            <h3 class="exp-role">Full-Stack Web Developer</h3>
+            <p class="exp-company">Self-employed</p>
+            <p class="exp-summary">Design, build, and launch websites for small businesses, working directly with the owners.</p>
+            <ul class="exp-bullets">
+              <li>Built a WooCommerce online store for Navni Organic with Elementor and ShopEngine.</li>
+              <li>Built a fully custom, dynamic website with an admin dashboard for TA Labels, covering the front end, back end, and database.</li>
+              <li>Took each project from design to hosting and deployment, so clients dealt with one person from start to launch.</li>
             </ul>
+            <div class="tools-chips exp-tools" aria-label="Tools used">
+              <span>WordPress</span><span>WooCommerce</span><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Figma</span>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ SECTION 5: PROJECTS (DARK — Grid layout) ═══════════════ -->
-  <section id="projects" class="section projects-section dark-section">
+  <section id="tools" class="section tools-section">
     <div class="container">
-      <h2 class="section-title light"><span>Projects</span></h2>
-      <p class="section-subtitle light">Empowering businesses with smart web solutions so they can grow.</p>
-      <div class="projects-list">
-
-        <!-- Project 1: Navni Organics (Featured — spans full width) -->
-        <div class="project-card featured anim-observe" data-anim="scale-in">
-          <div class="project-mockup">
-            <img src="Projects/Navni/laptop-mockup.png" alt="Navni Organics storefront homepage showing natural skincare products and a ‘Glow Naturally with Navni’ hero; included to showcase the client e-commerce design." />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Navni Organics</h3>
-            <div class="project-type-tags">
-              <span class="project-tag">E-Commerce</span>
-              <span class="project-tag tag-client">Client</span>
-            </div>
-            <p class="project-description">Designed and built a fully functional e-commerce store for Navni Organics, a
-              brand specializing in organic products — focused on a modern, user-friendly shopping experience that holds
-              up across devices. Owned end to end — design, build, and deployment.</p>
-            <div class="project-tech">
-              <span class="tech-pill">WordPress</span>
-              <span class="tech-pill">WooCommerce</span>
-              <span class="tech-pill">Elementor</span>
-              <span class="tech-pill">HTML/CSS</span>
-              <span class="tech-pill">JavaScript</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2: TA Labels -->
-        <div class="project-card anim-observe" data-anim="scale-in">
-          <div class="project-mockup">
-            <img src="Projects/ta-labels/front-end-mockup.png" alt="TA Labels website screenshots showing the company profile, apparel products, and clothing catalog; included to showcase the textile business website." />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">TA Labels</h3>
-            <div class="project-type-tags">
-              <span class="project-tag">Business</span>
-              <span class="project-tag tag-client">Client</span>
-            </div>
-            <p class="project-description">Developed a responsive company website for TA Labels, a textile-industry
-              business, to showcase their profile and services with a professional frontend.</p>
-            <div class="project-tech">
-              <span class="tech-pill">WordPress</span>
-              <span class="tech-pill">Elementor</span>
-              <span class="tech-pill">HTML/CSS</span>
-              <span class="tech-pill">PHP</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: Baskeria -->
-        <div class="project-card anim-observe" data-anim="scale-in">
-          <div class="project-mockup">
-            <img src="Projects/Baskeria/baskeria-mockup.png" alt="Baskeria restaurant website showing a food hero, menu dishes, reservation form, and blog cards; included to demonstrate the restaurant site concept." />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Baskeria</h3>
-            <div class="project-type-tags">
-              <span class="project-tag">Restaurant</span>
-              <span class="project-tag tag-practice">Practice</span>
-            </div>
-            <p class="project-description">Designed a restaurant website featuring a full menu showcase, reservation
-              system, and blog section — built to demonstrate dynamic layout capabilities.</p>
-            <div class="project-tech">
-              <span class="tech-pill">HTML/CSS</span>
-              <span class="tech-pill">JavaScript</span>
-              <span class="tech-pill">Bootstrap</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4: Educrown -->
-        <div class="project-card anim-observe" data-anim="scale-in">
-          <div class="project-mockup">
-            <img src="Projects/Educrown/Educrown Mockup.png" alt="Educrown learning platform homepage showing course search, instructor and certification cards, and a trending courses grid; included to showcase the e-learning interface concept." />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Educrown</h3>
-            <div class="project-type-tags">
-              <span class="project-tag">Education</span>
-              <span class="project-tag tag-practice">Practice</span>
-            </div>
-            <p class="project-description">Built a modern e-learning platform UI featuring course catalogues,
-              testimonials, and student statistics with engaging interfaces.</p>
-            <div class="project-tech">
-              <span class="tech-pill">HTML/CSS</span>
-              <span class="tech-pill">JavaScript</span>
-              <span class="tech-pill">jQuery</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5: Foodmart -->
-        <div class="project-card anim-observe" data-anim="scale-in">
-          <div class="project-mockup">
-            <img src="Projects/Foodmart/Foodmart Mockup.png" alt="Foodmart grocery storefront showing fresh food promotions, category tiles, and a product grid; included to showcase the grocery e-commerce interface concept." />
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Foodmart</h3>
-            <div class="project-type-tags">
-              <span class="project-tag">Grocery</span>
-              <span class="project-tag tag-practice">Practice</span>
-            </div>
-            <p class="project-description">Developed a comprehensive grocery e-commerce UI with category browsing,
-              product grids, promotions, and a full cart-to-checkout flow.</p>
-            <div class="project-tech">
-              <span class="tech-pill">HTML/CSS</span>
-              <span class="tech-pill">JavaScript</span>
-              <span class="tech-pill">Bootstrap</span>
-              <span class="tech-pill">AJAX</span>
-            </div>
-          </div>
-        </div>
-
+      <h2 class="section-title light">Tools I work with</h2>
+      <p class="section-subtitle light">What I use to build and launch websites.</p>
+      <div class="tools-grid">
+        <article class="tools-group">
+          <p class="tools-label">Front end</p>
+          <div class="tools-chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>jQuery</span><span>AJAX</span><span>Bootstrap</span></div>
+        </article>
+        <article class="tools-group">
+          <p class="tools-label">Back end</p>
+          <div class="tools-chips"><span>PHP</span><span>Python</span><span>MySQL</span><span>Supabase</span></div>
+        </article>
+        <article class="tools-group">
+          <p class="tools-label">CMS and e-commerce</p>
+          <div class="tools-chips"><span>WordPress</span><span>WooCommerce</span><span>Elementor</span><span>ShopEngine</span></div>
+        </article>
+        <article class="tools-group">
+          <p class="tools-label">Design</p>
+          <div class="tools-chips"><span>Figma</span><span>Adobe XD</span><span>Photoshop</span><span>Canva</span></div>
+        </article>
+        <article class="tools-group">
+          <p class="tools-label">Hosting and tools</p>
+          <div class="tools-chips"><span>Git</span><span>GitHub</span><span>cPanel</span><span>Hostinger</span><span>Netlify</span><span>InfinityFree</span></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ SECTION 6: SKILLS (DARK) ═══════════════ -->
-  <section id="skills" class="section skills-section dark-section">
+  <section id="recognition" class="section recognition-section">
     <div class="container">
-      <h2 class="section-title light"><span>Skills</span></h2>
-      <div class="skills-grid">
-        <div class="skill-category-card anim-observe">
-          <div class="skill-cat-header">
-            <span class="skill-cat-icon">🖥️</span>
-            <h3>Front-End Development</h3>
-          </div>
-          <div class="skill-bar-group">
-            <div class="skill-item">
-              <div class="skill-info"><span>HTML / CSS</span><span class="skill-pct" data-pct="88">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="88"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Bootstrap</span><span class="skill-pct" data-pct="80">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="80"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>JavaScript / jQuery</span><span class="skill-pct" data-pct="78">0%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="78"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>AJAX</span><span class="skill-pct" data-pct="70">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="70"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-category-card anim-observe">
-          <div class="skill-cat-header">
-            <span class="skill-cat-icon">⚙️</span>
-            <h3>Back-End Development</h3>
-          </div>
-          <div class="skill-bar-group">
-            <div class="skill-item">
-              <div class="skill-info"><span>MySQL</span><span class="skill-pct" data-pct="75">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="75"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>PHP</span><span class="skill-pct" data-pct="75">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="75"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Python</span><span class="skill-pct" data-pct="65">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="65"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-category-card anim-observe">
-          <div class="skill-cat-header">
-            <span class="skill-cat-icon">🛒</span>
-            <h3>CMS &amp; E-Commerce</h3>
-          </div>
-          <div class="skill-bar-group">
-            <div class="skill-item">
-              <div class="skill-info"><span>WordPress</span><span class="skill-pct" data-pct="85">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="85"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>WooCommerce</span><span class="skill-pct" data-pct="82">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="82"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Elementor</span><span class="skill-pct" data-pct="80">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="80"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>ShopEngine</span><span class="skill-pct" data-pct="72">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="72"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-category-card anim-observe">
-          <div class="skill-cat-header">
-            <span class="skill-cat-icon">🎨</span>
-            <h3>UI/UX Design</h3>
-          </div>
-          <div class="skill-bar-group">
-            <div class="skill-item">
-              <div class="skill-info"><span>Figma</span><span class="skill-pct" data-pct="75">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="75"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Adobe XD</span><span class="skill-pct" data-pct="70">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="70"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Photoshop</span><span class="skill-pct" data-pct="72">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="72"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Canva</span><span class="skill-pct" data-pct="80">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="80"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-category-card anim-observe">
-          <div class="skill-cat-header">
-            <span class="skill-cat-icon">🚀</span>
-            <h3>Tools &amp; Deployment</h3>
-          </div>
-          <div class="skill-bar-group">
-            <div class="skill-item">
-              <div class="skill-info"><span>Git / GitHub</span><span class="skill-pct" data-pct="75">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="75"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Netlify</span><span class="skill-pct" data-pct="80">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="80"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Hostinger</span><span class="skill-pct" data-pct="78">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="78"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>InfinityFree</span><span class="skill-pct" data-pct="75">0%</span></div>
-              <div class="skill-bar">
-                <div class="skill-fill" data-width="75"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ SECTION 7: CERTIFICATIONS (DARK) ═══════════════ -->
-  <section id="certifications" class="section certifications-section dark-section">
-    <div class="container">
-      <h2 class="section-title light"><span>Certifications</span></h2>
-      <div class="certifications-grid">
-        <div class="cert-card anim-observe">
-          <div class="cert-badge-wrap">
-            <span class="cert-badge-icon">📜</span>
-            <span class="cert-badge-text">Certified</span>
-          </div>
-          <div class="cert-info">
-            <h3>Certificate in Web Designing &amp; Development</h3>
-            <p class="cert-provider">Skill Development Council Karachi</p>
-            <p class="cert-year">2024</p>
-          </div>
-          <div class="cert-links">
-            <a href="Certifications/certificate-designing.pdf" target="_blank" class="cert-link">View Designing
-              Certificate →</a>
-            <a href="Certifications/certificate-development.pdf" target="_blank" class="cert-link">View Development
-              Certificate →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ SECTION 8: ACHIEVEMENTS (DARK) ═══════════════ -->
-  <section id="achievements" class="section achievements-section dark-section">
-    <div class="container">
-      <h2 class="section-title light"><span>Achievements &amp; Recognition</span></h2>
-      <p class="section-subtitle light">Early wins on the way to a bigger career in web development.</p>
-      <div class="achievement-stats">
-        <div class="stat-counter anim-observe">
-          <span class="stat-number" data-target="1">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
-        <div class="stat-counter anim-observe">
-          <span class="stat-number" data-target="1">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Certifications</span>
-        </div>
-        <div class="stat-counter anim-observe">
-          <span class="stat-number" data-target="5">0</span>
-          <span class="stat-label">Projects</span>
-        </div>
-        <div class="stat-counter anim-observe">
-          <span class="stat-number" data-target="1">0</span>
-          <span class="stat-label">Award</span>
-        </div>
-      </div>
-      <div class="achievements-grid">
-        <div class="achieve-card anim-observe" data-anim="scale-in">
-          <div class="achieve-badge">🏆 Extracurricular</div>
-          <div class="achieve-image">
-            <img src="Education %26 Achiements/winner-web-designin-competetion.jpg"
+      <h2 class="section-title light">Recognition</h2>
+      <div class="recognition-grid">
+        <article class="recognition-card">
+          <h3>Certificate in Smart Web Designing.</h3>
+          <p>Skill Development Council Karachi, August 2024 to January 2025, grade A.</p>
+          <a class="cert-link" href="Certifications/certificate-designing.pdf" target="_blank" rel="noopener noreferrer">View Designing Certificate ?</a>
+        </article>
+        <article class="recognition-card">
+          <h3>Advanced Certificate in Web Development.</h3>
+          <p>Skill Development Council Karachi, June to November 2025, grade A-1.</p>
+          <a class="cert-link" href="Certifications/certificate-development.pdf" target="_blank" rel="noopener noreferrer">View Development Certificate ?</a>
+        </article>
+        <article class="recognition-card recognition-card-award">
+          <img src="Education %26 Achiements/winner-web-designin-competetion.png"
               alt="Wooden winner medal from Korean Computer Academy’s web designing competition; included as evidence of the first-place achievement." />
-          </div>
-          <div class="achieve-content">
-            <h3>Winner — Web Designing Competition</h3>
-            <p class="achieve-institution">Korean Computer Academy</p>
-            <p class="achieve-desc">Placed first in a web design competition, an early signal of the design-and-build
-              instinct that now drives the freelance client work.</p>
-          </div>
-        </div>
+          <h3>Winner, Web Designing Competition.</h3>
+          <p>Korean Computer Academy.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ SECTION 9: CONTACT (DARK) ═══════════════ -->
-  <section id="contact" class="section contact-section dark-section">
+
+
+
+
+  <section id="cta" class="section cta-section">
+    <div class="container">
+      <h2 class="section-title light" data-confirm="true">Open for internships and freelance projects.</h2>
+      <p class="section-subtitle light" data-confirm="true">Tell me about your project and I'll reply within a couple of days.</p>
+      <a class="btn btn-primary-light cta-button" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+<section id="contact" class="section contact-section dark-section">
     <div class="container">
       <h2 class="section-title light"><span>Let's Talk</span></h2>
       <p class="section-subtitle light">Have a project in mind? I'd love to hear about it.</p>
@@ -614,6 +411,17 @@
             <div class="form-group">
               <label for="subject">Subject</label>
               <input type="text" id="subject" name="_subject" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="projectType">What are you looking for?</label>
+              <select id="projectType" name="looking_for">
+                <option value="" selected></option>
+                <option>Business website</option>
+                <option>Online store</option>
+                <option>Custom web app</option>
+                <option>Internship or job</option>
+                <option>Something else</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
@@ -671,13 +479,13 @@
             </div>
           </div>
           <div class="contact-social-row">
-            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn" class="contact-social-icon">
+            <a href="{{LINKEDIN_URL}}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="contact-social-icon">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
               </svg>
             </a>
-            <a href="https://github.com/ammar-tariq-1" target="_blank" rel="noopener" aria-label="GitHub"
+            <a href="https://github.com/ammar-tariq-1" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
               class="contact-social-icon">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
@@ -702,8 +510,8 @@
           </svg>
         </a>
         <div class="footer-social-links">
-          <a href="https://github.com/ammar-tariq-1" target="_blank" rel="noopener">GitHub</a>
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/ammar-tariq-1" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="{{LINKEDIN_URL}}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
       <div class="footer-center">

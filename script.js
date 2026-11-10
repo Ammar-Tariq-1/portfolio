@@ -16,15 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.anim-observe, .exp-bullets li, .edu-highlights li, .tech-pill').forEach(el => {
       el.classList.add('visible');
     });
-    document.querySelectorAll('.skill-fill').forEach(fill => {
-      fill.style.width = fill.getAttribute('data-width') + '%';
-    });
-    document.querySelectorAll('.skill-pct').forEach(pct => {
-      pct.textContent = pct.getAttribute('data-pct') + '%';
-    });
-    document.querySelectorAll('.stat-number[data-target]').forEach(stat => {
-      stat.textContent = stat.getAttribute('data-target');
-    });
   }
 
   // ── Navbar: Light/Dark mode based on scroll ──
@@ -92,16 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Trigger children animations
         animateChildren(entry.target);
 
-        // Skill bars
-        if (entry.target.classList.contains('skill-category-card')) {
-          animateSkillBars(entry.target);
-        }
-
-        // Stat counters
-        if (entry.target.classList.contains('stat-counter')) {
-          animateCounter(entry.target.querySelector('.stat-number'));
-        }
-
         observer.unobserve(entry.target);
       }
     });
@@ -129,85 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         pill.classList.add('visible');
       }, 80 * i + 400);
     });
-  }
-
-  // ── Skill bar animation ──
-  function animateSkillBars(card) {
-    const fills = card.querySelectorAll('.skill-fill');
-    const pcts = card.querySelectorAll('.skill-pct');
-
-    if (prefersReducedMotion) {
-      fills.forEach(fill => { fill.style.width = fill.getAttribute('data-width') + '%'; });
-      pcts.forEach(pct => { pct.textContent = pct.getAttribute('data-pct') + '%'; });
-      return;
-    }
-
-    fills.forEach((fill, i) => {
-      const targetWidth = fill.getAttribute('data-width');
-      setTimeout(() => {
-        fill.style.width = targetWidth + '%';
-      }, 120 * i + 200);
-    });
-
-    pcts.forEach((pct, i) => {
-      const target = parseInt(pct.getAttribute('data-pct'));
-      setTimeout(() => {
-        animateNumber(pct, 0, target, 1000);
-      }, 120 * i + 200);
-    });
-  }
-
-  // ── Number counter animation ──
-  function animateNumber(element, start, end, duration) {
-    if (prefersReducedMotion) {
-      element.textContent = end + '%';
-      return;
-    }
-
-    const range = end - start;
-    const startTime = performance.now();
-
-    function update(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(start + range * easeOut);
-
-      element.textContent = current + '%';
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      }
-    }
-
-    requestAnimationFrame(update);
-  }
-
-  // ── Stat counter animation ──
-  function animateCounter(element) {
-    if (!element) return;
-    const target = parseInt(element.getAttribute('data-target'));
-    if (prefersReducedMotion) {
-      element.textContent = target;
-      return;
-    }
-    const duration = 1500;
-    const startTime = performance.now();
-
-    function update(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(target * easeOut);
-
-      element.textContent = current;
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      }
-    }
-
-    requestAnimationFrame(update);
   }
 
   // ── Project cards: stagger tech pills on scroll ──
