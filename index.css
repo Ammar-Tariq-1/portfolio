@@ -2291,6 +2291,12 @@ ul { list-style: none; }
 
   .nav-links li a:hover { color: var(--sage-deep) !important; }
 
+  .nav-links .nav-contact-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .education-grid { grid-template-columns: 1fr; }
 
   .projects-list { grid-template-columns: 1fr; }
