@@ -14,7 +14,7 @@ Text with no marker is based on facts the owner supplied and can ship as is.
 
 ## Hero (keep as is, plus one button in Task 7)
 
-Add a text link/button "Download resume" next to the existing buttons. File: `{{RESUME_PDF_PATH}}`. Keep the button hidden (`hidden` attribute and `data-confirm="true"`) until the owner replaces the path with the final, corrected resume file.
+Add a text link/button "Download resume" next to the existing buttons. File: `resume/ammar-resume.pdf`. Keep it visible as a secondary outline button with the `download` attribute; the final resume file is present.
 
 ---
 

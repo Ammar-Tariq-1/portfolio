@@ -1430,6 +1430,29 @@ ul { list-style: none; }
   font-weight: 500;
 }
 
+.hero-proof-link {
+  display: inline-flex;
+  width: fit-content;
+  max-width: min(100%, 680px);
+  min-height: var(--tap-min);
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 8px 12px;
+  background: var(--cream-dark);
+  line-height: 1.5;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.hero-proof-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 50%;
+  background: var(--sage-deep);
+}
+
 .project-tag.tag-client {
   background: var(--sage-muted);
   border: 1px solid var(--border-light);

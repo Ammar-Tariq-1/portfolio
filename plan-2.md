@@ -137,7 +137,7 @@ Acceptance:
 ## Task 7: Hero resume button, contact select, and header/footer links
 
 Steps:
-1. Hero: add a text-style button "Download resume" next to the existing hero buttons. It links to `{{RESUME_PDF_PATH}}` and uses the `download` attribute. It must be a secondary (outline) button so the hero keeps one primary button. Add the `hidden` attribute and `data-confirm="true"` so it does not show until the owner sets the real path and removes `hidden`. Report that it is hidden.
+1. Hero: add a text-style button "Download resume" next to the existing hero buttons. It links to `resume/ammar-resume.pdf` and uses the `download` attribute. It must be a secondary (outline) button so the hero keeps one primary button. The final PDF is present, so keep the link visible without `hidden` or `data-confirm`. Report that it is visible.
 2. Contact form: add the optional select field "What are you looking for?" with the options in `content.md`, with a visible label, above the Message field. Keep every existing field and the submit behavior.
 3. Header and footer: the email address and the GitHub and LinkedIn links must be reachable from both the nav area (a small mail icon link, 44px target) and the footer. Keep the existing footer layout. Use the existing icons.
 
@@ -154,7 +154,7 @@ Steps:
 5. Check at 390px width: no horizontal scroll, case-study rows and cards stack correctly.
 6. Check the section order and nav anchors against Task 1.
 7. Search the project (excluding `plan.md`, `plan-2.md`, `archive/`) for "Educrown", "Mission", "Vision", "Years Experience", and "ansari". Report any hit.
-8. Report whether the resume button is still hidden and whether `{{RESUME_PDF_PATH}}` is still a placeholder.
+8. Report whether the resume button is visible and confirm its path is `resume/ammar-resume.pdf`.
 9. Search for "ansari" in `index.html`, CSS, and JS (not `plan.md`, `plan-2.md`, or `archive/`), including any link or text that contains the old portfolio address `ammar-ansari.netlify.app`. Report every hit.
 10. Do not publish or change placeholder text. The owner replaces it.
 
@@ -196,7 +196,7 @@ Added the three Recognition cards, retained the existing certificate links, and 
 Removed obsolete skill-fill/percentage and achievement stat-counter JavaScript, including reduced-motion initialization and observer hooks.
 
 ### Task 7
-Added the hidden secondary Download resume link with the unchanged {{RESUME_PDF_PATH}} placeholder and added the optional labeled contact select.
+Updated the secondary Download resume link to `resume/ammar-resume.pdf`, made it visible, and added the optional labeled contact select.
 Added a 44px mail icon link to the navigation and ensured email, GitHub, and LinkedIn are available in the footer and existing social links.
 Updated the LinkedIn URLs supplied by the owner and added secure rel attributes to external social links.
 
